@@ -1,2 +1,2 @@
-module PasswordRessetsHelper
+module PasswordResetsHelper
 end

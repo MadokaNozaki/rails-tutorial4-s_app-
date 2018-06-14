@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'password_ressets/new'
+  get 'password_resets/new'
 
-  get 'password_ressets/edit'
+  get 'password_resets/edit'
 
   get 'sessions/new'
 
