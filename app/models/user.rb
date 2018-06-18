@@ -4,6 +4,8 @@ class User < ApplicationRecord
   foreign_key: "follower_id",
   dependent:   :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
+  has_many :following, through: :active_relationships, source: :followed
+
   before_save { self.email = email.downcase }
   before_save   :downcase_email
   before_create :create_activation_digest
