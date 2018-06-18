@@ -1,6 +1,3 @@
-<!--リスト 7.4: ユーザー情報を表示するための仮のビュー -->
-<%= @user.name %>, <%= @user.email %>
-<!--リスト 7.8: ユーザー表示ビューに名前とGravatarを表示する,リスト 7.10: ユーザーのshowビューにサイドバーを追加する-->
 <% provide(:title, @user.name) %>
 <div class="row">
   <aside class="col-md-4">
@@ -10,8 +7,12 @@
         <%= @user.name %>
       </h1>
     </section>
+    <section class="stats">
+      <%= render 'shared/stats' %>
+    </section>
   </aside>
   <div class="col-md-8">
+    <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
