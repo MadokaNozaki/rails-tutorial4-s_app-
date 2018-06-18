@@ -3,7 +3,12 @@ source 'https://rubygems.org'
 gem 'rails',        '5.1.6'
 gem 'bcrypt',       '3.1.11'
 gem 'faker',        '1.7.3'
+<<<<<<< HEAD
 gem 'rake',         '12.3.1'
+=======
+gem 'carrierwave',             '1.2.2'
+gem 'mini_magick',             '4.7.0'
+>>>>>>> user-microposts
 gem 'will_paginate',           '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'puma',         '3.9.1'
@@ -19,9 +24,6 @@ gem 'bootstrap-sass', '3.3.7'
 group :development, :test do
   gem 'sqlite3', '1.3.13'
   gem 'byebug',  '9.0.6', platform: :mri
-end
-
-group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
@@ -43,6 +45,7 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
+  gem 'fog', '1.42'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
